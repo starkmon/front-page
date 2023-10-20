@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import heroBG from "./ai-generated.jpg";
 import "./App.css";
 import Lottie from "lottie-react";
 import creature1 from "./creature1.json";
@@ -12,7 +12,7 @@ import compass from "./compass.json";
 function App() {
    return (
       <div className="App">
-         <header className="App-header">
+         <header className="App-header" id="container">
             <Lottie className="creature1" animationData={creature1} />
             <Lottie className="creature2" animationData={creature2} />
 
@@ -34,12 +34,25 @@ function App() {
             </div>
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
 
-            <h1 className="game-title">starkmon</h1>
+            <div>
+               <h1 className="game-title" id="inner">
+                  <span className="gt1">s</span>
+                  <span className="gt2">t</span>
+                  <span className="gt3">a</span>
+                  <span className="gt4">r</span>
+                  <span className="gt5">k</span>
+                  <span className="gt4">m</span>
+                  <span className="gt2">o</span>
+                  <span className="gt1">n</span>
+               </h1>
 
-            <h3>
-               Catch cool creatures <br></br>
-               Get them to BATTLE
-            </h3>
+               <h3>
+                  <span className="h3">Unleash the </span>
+                  <span className="h3-highlight">
+                     <span>Creatures</span>
+                  </span>
+               </h3>
+            </div>
 
             <a className="btn1" href="#">
                <span>try now</span>
@@ -81,6 +94,15 @@ function App() {
          </header>
 
          <div className="sec2">
+            <p className="solo">
+               Embark on a captivating journey in the quest of Starkmon, a 2D
+               video game where players hunt and capture extraordinary creatures
+               with unique stats. Armed with coins and a Starkdex, navigate
+               enchanting landscapes to discover Thunderfins, Moonwhispers, and
+               more. Every Starkmon captured brings you closer to becoming a
+               legendary Trainer. Engage in thrilling battles, elevate your
+               rank, and let the quest for mastery begin!
+            </p>
             <h2>
                Become a <span className="stark-title">Starkmaniac</span>
             </h2>
