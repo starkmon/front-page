@@ -24,11 +24,39 @@
   color: white;
 }
 
+/******************************
+    TYPOGRAPHY
+******************************/
 
+h2 {
+  color: #7b898a;
+  font-size: 4em;
+  /font-family: 'Comic Neue';
+  font-family: Jost;
+  font-weight: 300;
+}
+
+h4 {
+  color: #7b898a;
+  font-family: Jost;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 36px 0 0 0;
+}
+
+.stark-title {
+  font-family: 'Finger Paint';
+  text-transform: lowercase;
+  font-weight: bold;
+  color: #ec790e
+}
 
 p {
   font-family: "nunito";
+  color: black;
+  opacity: 0.5;
 }
+
 
 /******************************
     BG CREATURES
@@ -205,13 +233,53 @@ path.ar2 {
 
 
 
+/******************************
+    SEC 2
+******************************/
+
+.sec2 {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sec2-blurbs {
+  display: flex;
+  flex-direction: row;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.blurb div {
+  width: 200px;
+}
+
+/******************************
+    SEC 2 - BLURBS
+******************************/
+
+.blurb {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/******************************
+    SEC 2 - BLURBS SVG
+******************************/
+
+.compass {
+  transform: scale(1.2);
+  position: relative;
+  top: 28px;
+  opacity: 0.8;
+}
+
+.ranking {
+  transform: scale(1.5);
+  position: relative;
+  top: 28px;
 }
