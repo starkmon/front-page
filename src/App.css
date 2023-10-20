@@ -24,6 +24,46 @@
   color: white;
 }
 
+/******************************
+    HERO glow particles
+******************************/
+
+.particle2 {
+  position: absolute;
+  opacity: 0.02;
+  z-index: 0;
+  height: 100vh;
+  filter: blur(0px);
+  
+}
+
+.particle2-2 {
+  left: 0px;
+  top: 0px;
+  transform: scale(2);
+  filter: blur(0.1px);
+}
+
+.particle2-3 {
+  right: 0px;
+  top: 0px;
+  transform: scale(2);
+  filter: blur(0.1px);
+}
+
+.particle2-4 {
+  left: 0px;
+  top: 0px;
+  transform: scale(6);
+  filter: blur(0.6px);
+}
+
+.particle2-5 {
+  right: 0px;
+  top: 0px;
+  transform: scale(6);
+  filter: blur(0.6px);
+}
 
 /******************************
     TYPOGRAPHY
@@ -63,7 +103,6 @@ p {
 p.solo {
   margin: 80px auto 20px;
 }
-
 
 /******************************
     BG CREATURES

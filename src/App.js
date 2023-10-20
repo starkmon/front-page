@@ -6,6 +6,8 @@ import creature2 from "./creature2.json";
 import creature3 from "./creature3.json";
 import creature4 from "./creature4.json";
 import waves from "./waves.json";
+import particle1 from "./particle1.json";
+import particle2 from "./particle2.json";
 import ranking from "./ranking5.json";
 import compass from "./compass.json";
 
@@ -15,6 +17,29 @@ function App() {
          <header className="App-header" id="container">
             <Lottie className="creature1" animationData={creature1} />
             <Lottie className="creature2" animationData={creature2} />
+            <Lottie
+               className="particle2 particle2-1"
+               animationData={particle2}
+               speed={2}
+            />
+            <Lottie
+               className="particle2 particle2-2"
+               animationData={particle2}
+               speed={0}
+            />
+            <Lottie
+               className="particle2 particle2-3"
+               animationData={particle2}
+            />
+            {/*
+            <Lottie
+               className="particle2 particle2-4"
+               animationData={particle2}
+            />
+            <Lottie
+               className="particle2 particle2-5"
+               animationData={particle2}
+            /> */}
 
             <div className="menu-wrap">
                <div className="menu">
