@@ -1,3 +1,4 @@
+import { useState } from "react";
 import heroBG from "./ai-generated.jpg";
 import "./App.css";
 import Lottie from "lottie-react";
@@ -18,8 +19,18 @@ import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 import { faCommentsDollar } from "@fortawesome/free-solid-svg-icons";
 import { faSignal } from "@fortawesome/free-solid-svg-icons";
 import { faRankingStar } from "@fortawesome/free-solid-svg-icons";
+import { connect, disconnect } from "get-starknet";
+
 
 function App() {
+   const handleConnect = () => {
+      connect({
+         modalMode: "alwaysAsk",
+      }).then(resp =>
+         console.log("Debug: ", resp)
+      );
+
+   }
    return (
       <div className="App">
          {/****************************************************************************
@@ -69,9 +80,9 @@ function App() {
                   <a className="menu-item" href="https://reactjs.org">
                      <span>Instructions</span>
                   </a>
-                  <a className="menu-item" href="https://reactjs.org">
+                  <button className="menu-item" onClick={() => handleConnect()}>
                      <span>Play</span>
-                  </a>
+                  </button>
                </div>
             </div>
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
@@ -97,7 +108,7 @@ function App() {
             </div>
 
             <a className="btn1" href="#">
-               <span>try now</span>
+               <span onClick={() => handleConnect()}>try now</span>
                <span>
                   <svg
                      width="66px"
