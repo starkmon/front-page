@@ -19,24 +19,22 @@ import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 import { faCommentsDollar } from "@fortawesome/free-solid-svg-icons";
 import { faSignal } from "@fortawesome/free-solid-svg-icons";
 import { faRankingStar } from "@fortawesome/free-solid-svg-icons";
-import { Modal } from "./components/WalletModal";
+import { connect, disconnect } from "get-starknet";
+
 
 function App() {
-   const [modalVisible, setModalVisible] = useState(false);
+   // console.log("DEBUG ", getAvailableWallets());
 
-   const handleConnect = (wallet) => {
-      console.log('Connecting to', wallet);
-      // Your wallet connection logic here
-      setModalVisible(false);  // Hide modal after selection
-   };
+   const handleConnect = () => {
+      connect({
+         modalMode: "alwaysAsk",
+      }).then(resp =>
+         console.log("Debug: ", resp)
+      );
 
+   }
    return (
       <div className="App">
-         <Modal
-            show={modalVisible}
-            onClose={() => setModalVisible(false)}
-            onConnect={handleConnect}
-         />
          {/****************************************************************************
             HERO
          *****************************************************************************/}
@@ -84,7 +82,7 @@ function App() {
                   <a className="menu-item" href="https://reactjs.org">
                      <span>Instructions</span>
                   </a>
-                  <button className="menu-item" onClick={() => setModalVisible(true)}>
+                  <button className="menu-item" onClick={() => handleConnect()}>
                      <span>Play</span>
                   </button>
                </div>
@@ -112,7 +110,7 @@ function App() {
             </div>
 
             <a className="btn1" href="#">
-               <span>try now</span>
+               <span onClick={() => handleConnect()}>try now</span>
                <span>
                   <svg
                      width="66px"
