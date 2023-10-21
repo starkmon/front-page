@@ -411,6 +411,7 @@ h3 span.h3-highlight span {
 }
 
 .btn:hover {
+  cursor: pointer;
   transition: 0.5s;
   box-shadow: 10px 10px 0 #d86a04;
 }
