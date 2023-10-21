@@ -23,8 +23,6 @@ import { connect, disconnect } from "get-starknet";
 
 
 function App() {
-   // console.log("DEBUG ", getAvailableWallets());
-
    const handleConnect = () => {
       connect({
          modalMode: "alwaysAsk",
