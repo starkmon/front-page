@@ -6,10 +6,11 @@ import creature2 from "./creature2.json";
 import creature3 from "./creature3.json";
 import creature4 from "./creature4.json";
 import waves from "./waves.json";
-import particle1 from "./particle1.json";
+
 import particle2 from "./particle2.json";
 import ranking from "./ranking5.json";
 import compass from "./compass.json";
+import github from "./github.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWallet } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -38,11 +39,12 @@ function App() {
                animationData={particle2}
                speed={0}
             />
+            {/*
             <Lottie
                className="particle2 particle2-3"
                animationData={particle2}
             />
-            {/*
+            
             <Lottie
                className="particle2 particle2-4"
                animationData={particle2}
@@ -54,7 +56,7 @@ function App() {
 
             {/****************************************************************************
             HERO - menu
-         *****************************************************************************/}
+            *****************************************************************************/}
 
             <div className="menu-wrap">
                <div className="menu">
@@ -187,7 +189,6 @@ function App() {
          *****************************************************************************/}
 
          <div className="sec2 sec3">
-            <Lottie className="waves" animationData={particle1} />
             <div className="waves-overlay"></div>
             <h2>
                The <span className="stark-title">Gameflow</span>
@@ -304,6 +305,15 @@ function App() {
                      </svg>
                   </span>
                </a>
+               <footer>
+                  <div className="foot1">
+                     <p>
+                        <span>starkmon</span> <span>Unleesh the Creatures</span>{" "}
+                        | All rights reserved
+                     </p>
+                  </div>
+                  <div className="foot2"></div>
+               </footer>
             </div>
          </div>
       </div>
