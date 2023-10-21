@@ -144,6 +144,8 @@ p.solo {
   display: inline-block;
   transition: 0.3s;
   border: 0;
+  background: transparent;
+  transition: background 0.2s ease-in-out;
 }
 
 .menu-item span {
@@ -155,6 +157,7 @@ p.solo {
   background: #ffffff38;
   opacity: 0.8;
   border-bottom: 8px solid #d86a04;
+  cursor: pointer;
 }
 
 

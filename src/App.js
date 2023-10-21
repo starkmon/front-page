@@ -1,3 +1,4 @@
+import { useState } from "react";
 import heroBG from "./ai-generated.jpg";
 import "./App.css";
 import Lottie from "lottie-react";
@@ -18,10 +19,24 @@ import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 import { faCommentsDollar } from "@fortawesome/free-solid-svg-icons";
 import { faSignal } from "@fortawesome/free-solid-svg-icons";
 import { faRankingStar } from "@fortawesome/free-solid-svg-icons";
+import { Modal } from "./components/WalletModal";
 
 function App() {
+   const [modalVisible, setModalVisible] = useState(false);
+
+   const handleConnect = (wallet) => {
+      console.log('Connecting to', wallet);
+      // Your wallet connection logic here
+      setModalVisible(false);  // Hide modal after selection
+   };
+
    return (
       <div className="App">
+         <Modal
+            show={modalVisible}
+            onClose={() => setModalVisible(false)}
+            onConnect={handleConnect}
+         />
          {/****************************************************************************
             HERO
          *****************************************************************************/}
@@ -69,9 +84,9 @@ function App() {
                   <a className="menu-item" href="https://reactjs.org">
                      <span>Instructions</span>
                   </a>
-                  <a className="menu-item" href="https://reactjs.org">
+                  <button className="menu-item" onClick={() => setModalVisible(true)}>
                      <span>Play</span>
-                  </a>
+                  </button>
                </div>
             </div>
             {/* <img src={logo} className="App-logo" alt="logo" /> */}

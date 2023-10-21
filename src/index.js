@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  InjectedConnector,
+  StarknetConfig,
+} from "@starknet-react/core";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const connectors = [
+  new InjectedConnector({ options: { id: 'braavos' }}),
+  new InjectedConnector({ options: { id: 'argentX' }}),
+]
+
 root.render(
   <React.StrictMode>
-    <App />
+    <StarknetConfig connectors={connectors}>
+      <App />
+    </StarknetConfig>
   </React.StrictMode>
 );
 
