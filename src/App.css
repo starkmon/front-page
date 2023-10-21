@@ -471,10 +471,32 @@ path.ar2 {
     SEC 2
 ******************************/
 
+.waves {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.07;
+  z-index: -2;
+  transform: scaleX(-1);
+}
+
+.waves-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  bdisplay: none;
+  background-image: linear-gradient(to top , #ffffff, #ffffff30);
+  z-index: -1;
+}
+
 .sec2 {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  position: relative;
+  height: auto;
+  overflow:hidden;
 }
 
 .sec2-blurbs {
@@ -482,6 +504,7 @@ path.ar2 {
   flex-direction: row;
   max-width: 1024px;
   margin: auto;
+  padding-bottom: 60px;
 }
 
 .blurb div {
@@ -516,4 +539,53 @@ path.ar2 {
   transform: scale(1.5);
   position: relative;
   top: 28px;
+}
+
+
+/******************************
+    SEC 3
+******************************/
+
+
+
+.sec3-blurbs {
+  flex-wrap: wrap;
+  column-gap: 10%;
+  position: relative;
+
+}
+
+.sec3-blurb {
+  flex: calc(33.3% - 10%);
+  margin: 0;
+  position: relative;
+    margin-top: 100px;
+}
+
+.sec3-blurb svg {
+  font-size: 60px;
+  color: #464646;
+  margin-bottom: 20px;
+}
+
+.sec3-blurb:after {
+  content: "";
+  width: 200px;
+  height: 120px;
+  background: #f4f4f4;
+  display: inline;
+  position: absolute;
+  z-index: -1;
+  transform: skewX(20deg);
+  border-radius: 50%;
+  top: -20px;
+  right: 20px;
+}
+
+.sec3-blurb p {
+  font-family: 'Jost';
+}
+
+.sec3-blurb h4 {
+  display: none;
 }

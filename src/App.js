@@ -10,10 +10,16 @@ import particle1 from "./particle1.json";
 import particle2 from "./particle2.json";
 import ranking from "./ranking5.json";
 import compass from "./compass.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMugSaucer } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
    return (
       <div className="App">
+         {/****************************************************************************
+            HERO
+         *****************************************************************************/}
+
          <header className="App-header" id="container">
             <Lottie className="creature1" animationData={creature1} />
             <Lottie className="creature2" animationData={creature2} />
@@ -40,6 +46,10 @@ function App() {
                className="particle2 particle2-5"
                animationData={particle2}
             /> */}
+
+            {/****************************************************************************
+            HERO - menu
+         *****************************************************************************/}
 
             <div className="menu-wrap">
                <div className="menu">
@@ -118,7 +128,13 @@ function App() {
             </a>
          </header>
 
+         {/****************************************************************************
+            SEC 2 - Become a Starkmaniac
+         *****************************************************************************/}
+
          <div className="sec2">
+            <Lottie className="waves" animationData={waves} />
+            <div className="waves-overlay"></div>
             <p className="solo">
                Embark on a captivating journey in the quest of Starkmon, a 2D
                video game where players hunt and capture extraordinary creatures
@@ -156,6 +172,48 @@ function App() {
                         Compete with several fellow players’ Starkmons and climb
                         up the rank ladder to win a bounty
                      </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         {/****************************************************************************
+            SEC 3 - Walkthrough
+         *****************************************************************************/}
+
+         <div className="sec2">
+            <Lottie className="waves" animationData={waves} />
+            <div className="waves-overlay"></div>
+            <h2>
+               The <span className="stark-title">Gameflow</span>
+            </h2>
+            <div className="sec2-blurbs-wrap">
+               <div className="sec2-blurbs sec3-blurbs">
+                  <div className="blurb sec3-blurb">
+                     <FontAwesomeIcon icon={faMugSaucer} />
+                     <h4>Spawn</h4>
+                     <p>Connect wallet</p>
+                  </div>
+                  <div className="blurb sec3-blurb">
+                     <FontAwesomeIcon icon={faMugSaucer} />
+                     <h4>Spawn</h4>
+                     <p>Check inventory & stats</p>
+                  </div>
+                  <div className="blurb sec3-blurb">
+                     <FontAwesomeIcon icon={faMugSaucer} /> <h4>Spawn</h4>
+                     <p>Spawn a random location</p>
+                  </div>
+                  <div className="blurb sec3-blurb">
+                     <FontAwesomeIcon icon={faMugSaucer} /> <h4>Spawn</h4>
+                     <p>Explore & catch Starkmons</p>
+                  </div>
+                  <div className="blurb sec3-blurb">
+                     <FontAwesomeIcon icon={faMugSaucer} /> <h4>Catch</h4>
+                     <p>Exchange feedback</p>
+                  </div>
+                  <div className="blurb sec3-blurb">
+                     <FontAwesomeIcon icon={faMugSaucer} /> <h4>Battle</h4>
+                     <p>Analyze leaderboard</p>
                   </div>
                </div>
             </div>
