@@ -1,10 +1,10 @@
-import heroBG from "./ai-generated.jpg";
+// import heroBG from "./ai-generated.jpg";
 import "./App.css";
 import Lottie from "lottie-react";
 import creature1 from "./creature1.json";
 import creature2 from "./creature2.json";
 import creature3 from "./creature3.json";
-import creature4 from "./creature4.json";
+// import creature4 from "./creature4.json";
 import waves from "./waves.json";
 
 import particle2 from "./particle2.json";
@@ -24,9 +24,11 @@ function App() {
    const handleConnect = () => {
       connect({
          modalMode: "alwaysAsk",
-      }).then(resp =>
-         window.location.href = 'http://localhost:5173/'
-      );
+      }).then(resp => {
+         window.location.href = window.location.href.indexOf("localhost") === -1 ?
+            '/game' :
+            'http://localhost:5173/';
+      });
    }
 
    return (
