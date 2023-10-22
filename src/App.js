@@ -69,7 +69,7 @@ function App() {
             HERO - menu
             *****************************************************************************/}
 
-            <div className="menu-wrap" id="home">
+            {/* <div className="menu-wrap" id="home">
                <div className="menu">
                   <a className="menu-item" href="#home">
                      <span>Home</span>
@@ -84,7 +84,7 @@ function App() {
                      <span>Team</span>
                   </a>
                </div>
-            </div>
+            </div> */}
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
 
             <div>
@@ -98,7 +98,7 @@ function App() {
                   <span className="gt2">o</span>
                   <span className="gt1">n</span>
                </h1>
-
+               <br /><br /><br />
                <h3>
                   <span className="h3">Unleash the </span>
                   <span className="h3-highlight">
@@ -251,27 +251,27 @@ function App() {
                      <p>1. Connect wallet</p>
                   </div>
                   <div className="blurb sec3-blurb">
-                     <FontAwesomeIcon icon={faSignal} />
-                     <h4>Spawn</h4>
-                     <p>2. Check inventory & stats</p>
-                  </div>
-                  <div className="blurb sec3-blurb">
                      <FontAwesomeIcon icon={faLocationDot} />
                      <h4>Spawn</h4>
-                     <p>3. Spawn a random location</p>
+                     <p>2. Spawn a random location</p>
                   </div>
                   <div className="blurb sec3-blurb">
                      <FontAwesomeIcon icon={faMagnifyingGlassLocation} />{" "}
                      <h4>Spawn</h4>
-                     <p>4. Explore & catch Starkmons</p>
+                     <p>3. Explore & catch Starkmons</p>
+                  </div>
+                  <div className="blurb sec3-blurb">
+                     <FontAwesomeIcon icon={faSignal} />
+                     <h4>Spawn</h4>
+                     <p>4. Manage your inventory</p>
                   </div>
                   <div className="blurb sec3-blurb">
                      <FontAwesomeIcon icon={faCommentsDollar} /> <h4>Catch</h4>
-                     <p>5. Exchange feedback</p>
+                     <p>5. Strategize and trade</p>
                   </div>
                   <div className="blurb sec3-blurb">
                      <FontAwesomeIcon icon={faRankingStar} /> <h4>Battle</h4>
-                     <p>6. Analyze leaderboard</p>
+                     <p>6. Join the leaderboard</p>
                   </div>
                </div>
             </div>
