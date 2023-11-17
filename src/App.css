@@ -115,13 +115,33 @@ p.solo {
   position: absolute;
   left: -11em;
   height: 100vh;
+  display: none;
 }
 
 .creature2 {
   position: absolute;
   right: -11em;
   height: 100vh;
-  transform: scaleX(-1)
+  transform: scaleX(-1);
+  display: none;
+}
+
+.Bloomstalk {
+  position: absolute;
+  opacity: 0.85;
+  left: -3em;
+  height: 105vh;
+  bottom: -5em;
+  image-rendering: pixelated;
+}
+
+.Stoneshell {
+  position: absolute;
+  opacity: 0.85;
+  right: -12em;
+  bottom: 0;
+  height: 80vh;
+  image-rendering: pixelated;
 }
 
 /******************************
@@ -151,9 +171,24 @@ p.solo {
   transition: background 0.2s ease-in-out;
 }
 
+a.menu-icon:hover {
+  background: none;
+  border: none;
+  color: #d86a04;
+  opacity: 1;
+}
+
 .menu-item span {
   transform: skew(-20deg);
   display: inline-block
+}
+
+.menu-icon {
+  font-size: 26px;
+  position: relative;
+  top: 2px;
+  transition: 0.3s;
+  padding-top: 0;
 }
 
 .menu-item:hover {
@@ -174,6 +209,7 @@ p.solo {
   filter: blur(0px);
   font-size: 3.5em;
   margin: 0 0 20px 0;
+  margin-top: 1em;
 }
 
 /******************************
@@ -666,6 +702,7 @@ path.ar2 {
 .github-wrap {
   display: flex;
   justify-content: center;
+  display: none;
 }
 
 /* .github:after {

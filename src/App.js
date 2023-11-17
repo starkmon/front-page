@@ -4,6 +4,9 @@ import Lottie from "lottie-react";
 import creature1 from "./creature1.json";
 import creature2 from "./creature2.json";
 import creature3 from "./creature3.json";
+import Bloomstalk from "./Bloomstalk.png";
+import Stoneshell from "./Stoneshell.png";
+
 // import creature4 from "./creature4.json";
 import waves from "./waves.json";
 
@@ -18,18 +21,20 @@ import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 import { faCommentsDollar } from "@fortawesome/free-solid-svg-icons";
 import { faSignal } from "@fortawesome/free-solid-svg-icons";
 import { faRankingStar } from "@fortawesome/free-solid-svg-icons";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { connect } from "get-starknet";
 
 function App() {
    const handleConnect = () => {
       connect({
          modalMode: "alwaysAsk",
-      }).then(resp => {
-         window.location.href = window.location.href.indexOf("localhost") === -1 ?
-            '/game' :
-            'http://localhost:5173/';
+      }).then((resp) => {
+         window.location.href =
+            window.location.href.indexOf("localhost") === -1
+               ? "/game"
+               : "http://localhost:5173/";
       });
-   }
+   };
 
    return (
       <div className="App">
@@ -39,7 +44,9 @@ function App() {
 
          <header className="App-header" id="container">
             <Lottie className="creature1" animationData={creature1} />
+            <img src={Bloomstalk} className="Bloomstalk" alt="logo" />
             <Lottie className="creature2" animationData={creature2} />
+            <img src={Stoneshell} className="Stoneshell" alt="logo" />
             <Lottie
                className="particle2 particle2-1"
                animationData={particle2}
@@ -69,7 +76,7 @@ function App() {
             HERO - menu
             *****************************************************************************/}
 
-            {/* <div className="menu-wrap" id="home">
+            <div className="menu-wrap" id="home">
                <div className="menu">
                   <a className="menu-item" href="#home">
                      <span>Home</span>
@@ -83,8 +90,16 @@ function App() {
                   <a className="menu-item" href="#team">
                      <span>Team</span>
                   </a>
+                  <a className="menu-item menu-icon" href="#team">
+                     <span>
+                        <FontAwesomeIcon
+                           icon={faDiscord}
+                           className="menu-icon"
+                        />
+                     </span>
+                  </a>
                </div>
-            </div> */}
+            </div>
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
 
             <div>
@@ -98,7 +113,8 @@ function App() {
                   <span className="gt2">o</span>
                   <span className="gt1">n</span>
                </h1>
-               <br /><br /><br />
+
+               <br />
                <h3>
                   <span className="h3">Unleash the </span>
                   <span className="h3-highlight">
@@ -293,31 +309,26 @@ function App() {
                   <div className="blurb sec4-blurb">
                      <div className="avatar av1"> </div>
                      <h4>@shramee</h4>
-                     <p>
-                        Explore the world of powerful creatures called Starkmons
-                        and catch as many as you can before other players
-                     </p>
+                     <p>Chief Executive Officer</p>
                   </div>
                   <div className="blurb sec4-blurb">
                      <div className="avatar av2"> </div>
                      <h4>@rutefig</h4>
-                     <p>
-                        Choose your Starkmon creatures based on their health,
-                        rarity and other quality stats
-                     </p>
+                     <p>Chief Technology Officer</p>
                   </div>
                   <div className="blurb sec4-blurb">
                      <div className="avatar av3"> </div>
                      <h4>@hazykeys</h4>
-                     <p>
-                        Compete with several fellow players’ Starkmons and climb
-                        up the rank ladder to win a bounty
-                     </p>
+                     <p>Creative Director</p>
                   </div>
                </div>
 
                <div className="github-wrap">
-                  <a href="https://github.com/starkmon" target="_blank" rel="noreferrer">
+                  <a
+                     href="https://github.com/starkmon"
+                     target="_blank"
+                     rel="noreferrer"
+                  >
                      <Lottie className="github" animationData={github} />
                   </a>
                </div>
@@ -325,7 +336,7 @@ function App() {
 
             <div className="cta">
                <a className="btn" href="#">
-                  <span>Connect Wallet</span>
+                  <span>Play Now</span>
                   <span>
                      <svg
                         width="66px"
